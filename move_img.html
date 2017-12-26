@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0"/>
+		<title>上传轮播图</title>
+		<link rel="stylesheet" href="css/index.css">
+		<script src="js/jquery-3.2.1.min.js"></script>
+	</head>
+	<body>
+		<div id="box" style="">
+			<!-- 上传轮播图 -->
+			<form class="upBox">
+				 <div class="inputBox"><input type="file" title="请选择图片" id="file0" multiple accept="image/png,image/jpg,image/gif,image/JPEG"/><span class="goon">点击选择</span><strong>轮播图</strong></div>
+			     <div id="imgBox0"></div>
+			     <a class="btn" id="btn0">上传</a>
+			</form>
+		</div>
+		<script src="js/upload.js" charset="utf-8"></script>
+		<script type="text/javascript">
+				   var removeImg = move.removeImg;
+				   // move_img
+				   move.imgUpload({
+					    inputId:'file0', //input框id
+					    imgBox:'imgBox0', //图片容器id
+					    buttonId:'btn0', //提交按钮id
+					    upUrl:'http://192.168.1.111:3000/mock/13/saveAdImg01',//提交地址
+					    data:'file1', //参数名
+						num:"3"//上传个数限制
+				   });
+		</script>
+	</body>
+</html>
